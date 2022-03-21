@@ -1,3 +1,3 @@
-# RaroAcademyTP10
+# RaroAcademy
 
 Projeto de componentização individual

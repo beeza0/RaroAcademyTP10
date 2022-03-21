@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script type="text/babel">
+
+        const rootElement = document.getElementById('root')
+
+        const cards = [
+            {
+                name: 'Bernardo',
+                role: 'CTO'
+            },
+            {
+                name: 'Renata',
+                role: 'CEO'
+            },
+            {
+                name: 'Breno',
+                role: 'CFO'
+            },
+            {
+                name: 'Rogério',
+                role: 'Regional Manager'
+            }
+        ]
+
+        const Header = ({children}) => (
+            <div className="header-container">
+                {children}
+            </div>
+        )
+
+        const Title = () => (
+            <h1 className="title">CONTACTS</h1>
+        )
+
+        const SearchButton = () => (
+            <button className="search-button">Search</button>
+        )
+
+        const CardsContainer = ({children}) => (
+            <div className="cards-container">
+                {children}
+            </div>
+        )
+
+        const Card = ({name, role, src}) => (
+            <div className="card-container">
+                <div className="card-profile">
+                    <img className="card-img" src={`https://i.pravatar.cc/150?img=${src}`}/>
+                    <div className="card-profile-info">
+                        <div className="card-profile-name">{name}</div>
+                        <div className="card-profile-role">{role}</div>
+                    </div>
+                </div>
+                <div className="card-buttons">
+                    <button className="small-button">Call</button>
+                    <button className="big-button">Send Email</button>
+                </div>
+            </div>
+        )
+        
+        const Footer = (props) => (
+            <div className="footer">We found {props.rest} contacts</div>
+        )
+
+        const renderCards = () =>
+            cards.map((card, index) => {
+                return <Card name={card.name} role={card.role} src={index}/>
+            })
+
+        const element = (
+            <>
+                <Header>
+                    <Title/>
+                    <SearchButton/>
+                </Header>
+                <CardsContainer>
+                    {renderCards()}
+                </CardsContainer>
+                <Footer rest={23}/>
+            </>
+        )
+                    
+        ReactDOM.render(element, rootElement)
+
+    </script>
+</body>
+</html>

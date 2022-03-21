@@ -1,0 +1,106 @@
+body {
+    background-color: #4d77ff;
+    color: #f2Fa5a;
+    padding: 24px;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.title {
+    font-size: x-large;
+    font-weight: 650;
+}
+
+.search-button {
+    background-color: #f2Fa5a;  
+    color: rgb(118, 118, 118);
+    border-radius: 48px;
+    width: 150px;
+    font-weight: 600;
+}
+
+.search-button:hover {
+    color: #f2Fa5a;
+    background-color: rgb(118, 118, 118);
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container {
+    background-color: #56bbf1;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.card-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-profile-info {
+    margin-left: 10px;
+}
+
+.card-img {
+    width: 100px;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.card-profile-name {
+    font-size: larger;
+    font-weight: 600;
+}
+
+.card-profile-role {
+    color: #f4bbbb;
+    font-weight: 600;
+}
+
+.card-buttons {
+    margin: 24px;
+}
+ 
+.small-button {
+    background: rgb(130, 220, 255);
+    width: 48px;
+    border-radius: 8px;
+    border: solid;
+    border-width: 1px;
+}
+
+.small-button:hover {
+    color: rgb(130, 220, 255);
+    background-color: #f2Fa5a;
+}
+
+.big-button {
+    background: rgb(130, 220, 255);
+    width: 100px;
+    border-radius: 8px;
+    border: solid;
+    border-width: 1px;
+    margin: 8px;
+}
+
+.big-button:hover {
+    color: rgb(130, 220, 255);
+    background-color: #f2Fa5a;
+}
+
+.footer {
+    font-weight: 500;
+}
